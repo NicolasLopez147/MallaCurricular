@@ -8,11 +8,13 @@ public class App {
     }
 
     public static void insertarDatos(ListaAreglo<Materia> listaA , ListaEnlazada<Materia> listaE){
-        for (int i = 10000 ; i <= 100000000 ; i= i*5){
-            Materia[] materias = crearArreglo(i);
+        int index = 0;
+        for (int i = 10000 ; i <= 100000000 ; i= i*10){
+            //Materia[] materias = crearArreglo(i);
             long inicio  = System.currentTimeMillis();
             for (int j = 0 ; j < i ; j ++){
-                listaA.insertar(materias[j]);
+                //listaA.insertar(materias[j],index);
+                listaA.insertar(new Materia(5, "Materia"+String.valueOf(i+1),1 , 'a'),index);
             }
             long fin  = System.currentTimeMillis();
             double tiempo = (double) (fin-inicio)/1000;
@@ -21,7 +23,8 @@ public class App {
             
             inicio  = System.currentTimeMillis();
             for (int j = 0 ; j < i ; j ++){
-                listaE.insertar(materias[j]);
+                //listaE.insertar(materias[j],index);
+                listaE.insertar(new Materia(5, "Materia"+String.valueOf(i+1),1 , 'a'),index);
             }
             fin  = System.currentTimeMillis();
             tiempo = (double) (fin-inicio)/1000;
@@ -40,7 +43,7 @@ public class App {
          //   int creditos = (int) (Math.random()*5+1);
           //  int index = (int) (Math.random()*4);
          //   long codigo = (long) (Math.random()*10000000);
-            materias[i] = new Materia(5, "Materia"+String.valueOf(i+1),131313213 , 'a');
+            materias[i] = new Materia(5, "Materia"+String.valueOf(i+1),1 , 'a');
         }
         
         return materias;

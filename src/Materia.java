@@ -1,9 +1,9 @@
 public class Materia {
     private int creditos;
     private String nombre;
-    private long codigo;
+    private int codigo;
     private char componente;
-    Materia(int creditos , String nombre , long codigo , char componente){
+    Materia(int creditos , String nombre , int codigo , char componente){
         this.setCreditos(creditos);
         this.setNombre(nombre);
         this.setCodigo(codigo);
@@ -16,10 +16,10 @@ public class Materia {
     public void setComponente(char componente) {
         this.componente = componente;
     }
-    public long getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
-    public void setCodigo(long codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
     public String getNombre() {

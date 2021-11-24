@@ -1,7 +1,7 @@
 public class ListaAreglo<T> {
     ListaAreglo(){
     }
-    public void insertar(T data){
+    public void insertar(T data, int index){
         
     } 
 }
