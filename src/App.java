@@ -2,7 +2,14 @@ public class App {
     public static void main(String[] args) throws Exception {
         ListaAreglo <Materia> listaA = new  ListaAreglo <Materia> ();
         ListaEnlazada <Materia> listaE = new ListaEnlazada <Materia>();
-        insertarDatos(listaA, listaE);
+        //insertarDatos(listaA, listaE);
+        listaA.insertar(new Materia(5, "Materia"+String.valueOf(21),1 , 'a'),0);
+        listaA.insertar(new Materia(5, "Materia"+String.valueOf(21),1 , 'a'),0);
+        listaA.insertar(new Materia(5, "Materia"+String.valueOf(21),1 , 'a'),0);
+        System.out.println("La lista esta vacia: "+listaA.vacio());
+        System.out.println("El tamano de la lista es: "+listaA.tanano());
+        System.out.println("La materia del indice 2 "+listaA.obtener(4));
+        //listaA.insertar(new Materia(5, "Materia"+String.valueOf(21),1 , 'a'),2);
 
 
     }
